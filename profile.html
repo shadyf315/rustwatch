@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111411" />
+    <meta name="description" content="Профиль RustWatch: монеты и коллекционные карточки Rust." />
+    <title>Профиль — RUSTWATCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <main id="top">
+        <header class="topbar">
+          <a class="brand" href="index.html" aria-label="RUSTWATCH — главная"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 5 10v11c0 8.2 6.4 13.7 15 16 8.6-2.3 15-7.8 15-16V10L20 3Z"/><path d="M14 27V13h8.6a5.4 5.4 0 0 1 1.8 10.5L28 27h-6l-2.9-3.2h-.8V27H14Zm4.3-7h3.8a1.2 1.2 0 1 0 0-2.4h-3.8V20Z"/></svg></span><span class="brand-name">RUST<span>WATCH</span><small>SERVER NETWORK</small></span></a>
+          <nav class="top-nav" aria-label="Главная навигация"><a href="index.html#servers">Сервера</a><a href="index.html#connect-guide">Как подключиться</a></nav>
+          <div class="top-actions"><a class="profile-nav active" href="profile.html" aria-current="page">Профиль <span aria-hidden="true">↗</span></a></div>
+        </header>
+
+        <section class="profile-page-hero">
+          <div class="eyebrow"><span></span> RUSTWATCH REWARDS · SEASON 01</div>
+          <h1>Твой <em>профиль</em></h1>
+          <p>Играй в Rust, получай монеты и собирай коллекцию.</p>
+        </section>
+
+        <section class="account-section" id="account" aria-labelledby="account-title">
+          <div class="section-heading"><div><div class="section-kicker">ЛОКАЛЬНЫЙ ПРОФИЛЬ</div><h2 id="account-title">Играй. Получай. Собирай.</h2></div><span class="rating-caption">Забирай 2 монеты раз в 30 минут</span></div>
+          <div class="account-grid">
+            <article class="account-card player-card">
+              <div class="account-card-kicker">ТВОЙ ПРОФИЛЬ</div>
+              <div class="player-identity" id="player-identity"><div class="player-avatar" aria-hidden="true">R</div><div><strong id="player-name">Игрок RustWatch</strong><span id="player-status">Профиль сохранён в этом браузере</span></div></div>
+              <div class="coin-balance"><span aria-hidden="true">◈</span><div><strong id="coin-balance">0</strong><small>МОНЕТ</small></div><a href="#card-shop">В магазин <b>↗</b></a></div>
+              <div class="playtime-track"><div class="playtime-label"><span>Следующая награда</span><b id="playtime-label">Можно забрать</b></div><div class="playtime-bar" role="progressbar" aria-label="Время до следующей награды" aria-valuemin="0" aria-valuemax="30" aria-valuenow="30"><span id="playtime-progress"></span></div><small id="reward-hint">Нажми кнопку — получишь 2 монеты</small></div>
+              <button type="button" class="claim-coins" id="claim-coins">Забрать 2 монеты <span aria-hidden="true">◈</span></button>
+            </article>
+            <section class="shop-card" id="card-shop" aria-labelledby="shop-title">
+              <div class="shop-heading"><div><div class="account-card-kicker">КОЛЛЕКЦИЯ · СЕЗОН 01</div><h3 id="shop-title">Коллекционные карточки</h3></div><span>Покупай за монеты</span></div>
+              <div class="card-grid">
+                <article class="collectible-card card-sulfur"><div class="card-art" aria-hidden="true"><span>☀</span><i></i></div><div class="collectible-info"><span>СЕРИЯ 001</span><h4>Пустошь</h4><button data-buy-card="wasteland" data-price="15">Купить <b>◈ 15</b></button></div></article>
+                <article class="collectible-card card-outpost"><div class="card-art" aria-hidden="true"><span>⌂</span><i></i></div><div class="collectible-info"><span>СЕРИЯ 002</span><h4>Аванпост</h4><button data-buy-card="outpost" data-price="25">Купить <b>◈ 25</b></button></div></article>
+                <article class="collectible-card card-night"><div class="card-art" aria-hidden="true"><span>✳</span><i></i></div><div class="collectible-info"><span>СЕРИЯ 003</span><h4>Ночная вылазка</h4><button data-buy-card="night" data-price="40">Купить <b>◈ 40</b></button></div></article>
+              </div>
+              <p class="collection-note" id="collection-note">Баланс и коллекция хранятся в этом браузере.</p>
+            </section>
+          </div>
+        </section>
+        <footer><span>© 2026 RUSTWATCH. НЕ АФФИЛИРОВАН С FACEPUNCH STUDIOS.</span><div><a href="index.html">К СПИСКУ СЕРВЕРОВ</a></div></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="account.js"></script>
+  </body>
+</html>
