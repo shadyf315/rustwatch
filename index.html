@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0c19" />
+    <meta name="description" content="Мониторинг серверов Rust: онлайн, карта, вайп и статус серверов." />
+    <title>RUSTWATCH — мониторинг серверов</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <main id="top">
+        <header class="topbar">
+          <a class="brand" href="#top" aria-label="RUSTWATCH — главная"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 5 10v11c0 8.2 6.4 13.7 15 16 8.6-2.3 15-7.8 15-16V10L20 3Z"/><path d="M14 27V13h8.6a5.4 5.4 0 0 1 1.8 10.5L28 27h-6l-2.9-3.2h-.8V27H14Zm4.3-7h3.8a1.2 1.2 0 1 0 0-2.4h-3.8V20Z"/></svg></span><span class="brand-name">RUST<span>WATCH</span><small>SERVER NETWORK</small></span></a>
+          <nav class="top-nav" aria-label="Главная навигация"><a class="active" href="#servers" data-nav-all aria-current="page">Сервера</a><a href="#connect-guide">Как подключиться</a><button type="button" data-nav-filter="favorites" aria-pressed="false">Избранное <span id="favorite-count">0</span></button></nav>
+          <div class="top-actions"><span class="demo-label"><i></i>КАТАЛОГ · ОБНОВЛЕНИЕ КАЖДЫЕ 5 МИН</span><button class="icon-button" id="refresh-button" aria-label="Обновить список" title="Обновить">↻</button><a class="profile-nav" href="profile.html">Профиль <span aria-hidden="true">↗</span></a></div>
+        </header>
+
+        <section class="hero" id="servers">
+          <div class="hero-copy"><div class="eyebrow"><span></span> RUST SERVER MONITORING</div><h1>Сервера <em>Rust</em></h1><p>Мониторинг игровых серверов · все регионы</p></div>
+          <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="ridge ridge-back"></div><div class="ridge ridge-front"></div><div class="radio-tower"><i></i><b></b><span></span></div><div class="hero-coords">54°42' N<br />20°30' E</div><div class="art-grain"></div></div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading"><div><div class="section-kicker">12 СЕРВЕРОВ · СПИСОК ДЛЯ ПРИМЕРА</div><h2>Рейтинг серверов Rust</h2></div><span class="rating-caption">Живое обновление раз в минуту</span></div>
+          <div class="quick-stats"><div class="quick-stat"><span class="quick-icon flame">♨</span><div><b>Онлайн в примере</b><span>2 074 игрока</span></div><div class="sparkline"><svg viewBox="0 0 72 26"><path d="M1 19 10 17 17 21 25 12 34 15 43 8 50 13 59 5 71 2"/></svg></div></div><div class="quick-stat"><span class="quick-icon wipe-icon">◷</span><div><b>Ближайший вайп</b><span>Пример: сегодня</span></div><span class="quick-arrow">→</span></div><div class="quick-stat"><span class="quick-icon peak-icon">↗</span><div><b>Пик активности</b><span>EU Main · 398 / 400</span></div><span class="peak-badge">98%</span></div></div>
+
+          <div class="toolbar"><div class="tabs" aria-label="Тип сервера"><button class="tab active" data-category="all" aria-pressed="true">Все <span>12</span></button><button class="tab" data-category="vanilla" aria-pressed="false">Vanilla</button><button class="tab" data-category="modded" aria-pressed="false">Modded</button><button class="tab" data-category="community" aria-pressed="false">Community</button></div><div class="toolbar-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Название или карта..." aria-label="Поиск по названию сервера или карте" autocomplete="off" /><kbd aria-hidden="true">Ctrl K</kbd></label><label class="sort-select"><span>Сортировка</span><select id="sort" aria-label="Сортировка серверов"><option value="players">По онлайну</option><option value="capacity">По заполненности</option><option value="free">По свободным слотам</option><option value="name">По названию</option></select><b aria-hidden="true">⌄</b></label></div></div>
+          <div class="filter-row"><div class="region-filters" role="group" aria-label="Фильтр по региону"><span>РЕГИОН:</span><button class="region active" data-region="all" aria-pressed="true">Все</button><button class="region" data-region="EU" aria-pressed="false">EU</button><button class="region" data-region="RU" aria-pressed="false">RU</button><button class="region" data-region="US" aria-pressed="false">US</button></div><label class="online-toggle"><input type="checkbox" id="online-only" /><span class="toggle-ui" aria-hidden="true"></span>Только онлайн</label><span class="updated-note"><i aria-hidden="true"></i> Источник BattleMetrics.ru</span></div>
+
+
+          <div class="server-table-wrap"><table class="server-table"><caption class="visually-hidden">Список серверов Rust, адреса и команды подключения</caption><thead><tr><th scope="col">СЕРВЕР</th><th scope="col">ИГРОКИ</th><th scope="col">КАРТА</th><th scope="col">WIPE</th><th scope="col">АДРЕС И КОМАНДА</th><th scope="col"><span class="visually-hidden">Действия</span></th></tr></thead><tbody id="server-list"></tbody></table><div class="empty-state" id="empty-state" hidden><span aria-hidden="true">⌕</span><b>Серверы не найдены</b><p>Попробуй изменить поисковый запрос или фильтры.</p><button id="reset-filters">Сбросить фильтры</button></div></div>
+          <div class="table-footer"><span id="results-label" aria-live="polite">Показано 12 серверов</span><button id="load-more" class="load-more">Загрузить ещё <span aria-hidden="true">↓</span></button></div>
+          <p class="source-note">Источник данных: <a href="https://battlemetrics.ru/api" target="_blank" rel="noopener noreferrer">BattleMetrics.ru</a>. Ключ API хранится в секретах GitHub Actions, каталог обновляется примерно каждые 5 минут.</p>
+        </section>
+        <section class="wipe-banner" id="connect-guide"><div class="wipe-symbol">⌘</div><div><span>КОМАНДА ДЛЯ ПОДКЛЮЧЕНИЯ</span><h3>F1 → connect IP:PORT</h3><p>Скопируй команду в карточке сервера или нажми «Играть», чтобы открыть Steam.</p></div><a href="#servers">К СПИСКУ <b>→</b></a><div class="wipe-dots"></div></section>
+        <footer id="about"><span>© 2026 RUSTWATCH. НЕ АФФИЛИРОВАН С FACEPUNCH STUDIOS.</span><div><a href="#about">О ПРОЕКТЕ</a><a href="#about">ПОДДЕРЖКА</a><a href="#about">DISCORD ↗</a></div></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <dialog class="server-profile" id="server-profile" aria-labelledby="profile-title">
+      <button class="profile-close" id="profile-close" type="button" aria-label="Закрыть профиль">×</button>
+      <div id="profile-content"></div>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
