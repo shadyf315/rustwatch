@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="48" x2="1460" y2="760" gradientUnits="userSpaceOnUse"><stop stop-color="#1b2221"/><stop offset="1" stop-color="#080b0b"/></linearGradient>
+    <linearGradient id="glow" x1="1077" y1="141" x2="1393" y2="583" gradientUnits="userSpaceOnUse"><stop stop-color="#b9fa61" stop-opacity=".34"/><stop offset="1" stop-color="#b9fa61" stop-opacity="0"/></linearGradient>
+    <linearGradient id="panel" x1="1043" y1="199" x2="1457" y2="618" gradientUnits="userSpaceOnUse"><stop stop-color="#252d2b"/><stop offset="1" stop-color="#141918"/></linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0v48" stroke="#fff" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1600" height="760" rx="36" fill="url(#bg)"/>
+  <rect width="1600" height="760" rx="36" fill="url(#grid)"/>
+  <circle cx="1266" cy="378" r="315" fill="url(#glow)"/>
+  <path d="M100 112h70" stroke="#b9fa61" stroke-width="4" stroke-linecap="round"/><text x="188" y="120" fill="#c9d0cd" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="4">RUST SERVER MONITOR</text>
+  <text x="100" y="284" fill="#f3f4ed" font-family="Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-5">Найди свой</text>
+  <text x="100" y="392" fill="#f3f4ed" font-family="Arial,sans-serif" font-size="104" font-weight="800" letter-spacing="-5">Rust сервер<span fill="#b9fa61">.</span></text>
+  <text x="105" y="458" fill="#aab3af" font-family="Arial,sans-serif" font-size="25">Живой онлайн, карта вайпа и быстрый вход</text>
+  <rect x="100" y="518" width="252" height="62" rx="14" fill="#b9fa61"/><text x="126" y="557" fill="#111510" font-family="Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="1">ОТКРЫТЬ МОНИТОР</text><path d="M320 549h15m-6-6 6 6-6 6" stroke="#111510" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1022" y="145" width="470" height="476" rx="25" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".1"/>
+  <text x="1058" y="194" fill="#eef1e9" font-family="Arial,sans-serif" font-size="20" font-weight="700">Сейчас в игре</text><circle cx="1440" cy="187" r="5" fill="#b9fa61"/><text x="1360" y="193" fill="#aab3af" font-family="Arial,sans-serif" font-size="12" letter-spacing="1">LIVE</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="1048" y="220" width="418" height="104" rx="16" fill="#1c2321" stroke="#ffffff" stroke-opacity=".06"/><rect x="1065" y="239" width="50" height="50" rx="12" fill="#384335"/><text x="1078" y="272" fill="#d6ffa2" font-size="15" font-weight="800">EU</text><text x="1130" y="255" fill="#f1f2ed" font-size="16" font-weight="700">Rustoria — EU Main</text><text x="1130" y="280" fill="#8e9994" font-size="13">Vanilla · 2x · Wipe сегодня</text><text x="1382" y="256" fill="#b9fa61" font-size="16" font-weight="700">386/400</text><rect x="1130" y="298" width="292" height="4" rx="2" fill="#323a37"/><rect x="1130" y="298" width="281" height="4" rx="2" fill="#b9fa61"/>
+    <rect x="1048" y="340" width="418" height="104" rx="16" fill="#1c2321" stroke="#ffffff" stroke-opacity=".06"/><rect x="1065" y="359" width="50" height="50" rx="12" fill="#40392c"/><text x="1078" y="392" fill="#ffdc91" font-size="15" font-weight="800">RU</text><text x="1130" y="375" fill="#f1f2ed" font-size="16" font-weight="700">Hollow — Monthly</text><text x="1130" y="400" fill="#8e9994" font-size="13">Solo/Duo/Trio · x2</text><text x="1382" y="376" fill="#b9fa61" font-size="16" font-weight="700">241/300</text><rect x="1130" y="418" width="292" height="4" rx="2" fill="#323a37"/><rect x="1130" y="418" width="235" height="4" rx="2" fill="#b9fa61"/>
+    <rect x="1048" y="460" width="418" height="104" rx="16" fill="#1c2321" stroke="#ffffff" stroke-opacity=".06"/><rect x="1065" y="479" width="50" height="50" rx="12" fill="#302f43"/><text x="1078" y="512" fill="#c5beff" font-size="15" font-weight="800">US</text><text x="1130" y="495" fill="#f1f2ed" font-size="16" font-weight="700">Atlas — US 5x</text><text x="1130" y="520" fill="#8e9994" font-size="13">Modded · Map 3500</text><text x="1382" y="496" fill="#b9fa61" font-size="16" font-weight="700">178/200</text><rect x="1130" y="538" width="292" height="4" rx="2" fill="#323a37"/><rect x="1130" y="538" width="260" height="4" rx="2" fill="#b9fa61"/>
+  </g>
+  <text x="102" y="690" fill="#69736e" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">RUSTWATCH · COMMUNITY SERVER BROWSER</text>
+</svg>
